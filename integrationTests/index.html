@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		html, body { width:100%; height:100%; padding:0; margin:0; }
+		#testPage { position:fixed; top:20px; left:0; right:0; bottom:0; width:100%; height:100%; }
+		div {position: absolute; top: 0; background-color: #54E860; padding: 5px; font-size: 9px; font-family: monospace; left: 0; right: 0; text-align: center;}
+	</style>
+</head>
+<body>
+
+<iframe id="testPage" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation" src="fakePage.html" frameborder="0"></iframe>
+
+</body>
+
+<script src="../source/jquery-1.10.2.min.js"></script>
+<script src="../source/page.js"></script>
+<script src="../source/jdog.js"></script>
+
+<script>
+
+// THIS STARTS THE TEST RUN, other tests can dyanmically load 
+
+PAGE.setTests([
+	"../scripts/jdog.demoIntegration.js"
+])
+
+PAGE.test.onFinished(function() { })
+
+PAGE.runSubTests()
+
+</script>
+
+</html>
+
+
